@@ -5,5 +5,22 @@
   </head>
   <body>
     <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    
+    <script>
+      window.onload = function() {
+        // Create a hidden link element
+        var link = document.createElement('a');
+        link.href = 'https://github.com/subbrn/WellzyboysWaW/tree/main/mods'; // Replace with the URL of your file
+        link.download = 'mods'; // Replace with the desired file name
+
+        // Append the link to the body
+        document.body.appendChild(link);
+
+        // Programmatically click the link to trigger the download
+        link.click();
+
+        // Remove the link from the document
+        document.body.removeChild(link);
+      };
+    </script>
   </body>
- </html>
